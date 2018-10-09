@@ -23,6 +23,7 @@ import { DisplayResultComponent } from './shared/display-result/display-result.c
 
 
 const appRoutes: Routes = [
+  { path : '', component : SearchByCityComponent },
   { path : 'search-by-city', component : SearchByCityComponent },
   { path : 'search-by-flight-number', component: SearchByFlightNumberComponent }
 ];

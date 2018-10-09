@@ -1,0 +1,12 @@
+export interface FlightStatus {
+    flightNumber: string;
+    carrier: string;
+    origin: string;
+    departure: string;
+    destination: string;
+    arrival: string;
+    aircraft: string;
+    distance: number;
+    travelTime: string;
+    status: string;
+}

@@ -1,0 +1,10 @@
+mat-form-field {
+    position: flex;
+    margin-inline-end: 0.7em;
+}
+
+
+button {
+    margin-inline-start: 0.3em;
+}
+

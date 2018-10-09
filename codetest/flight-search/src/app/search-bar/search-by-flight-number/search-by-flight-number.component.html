@@ -1,0 +1,32 @@
+<!-- search by flight number and date-->
+<div class="container">
+ 
+
+    <!-- flightNumber --> 
+    <mat-form-field>
+        <input matInput placeholder="Flight Number" [(ngModel)]="model.flightNumber" #flightNumber="ngModel" required>
+        <mat-error *ngIf="flightNumber.invalid"> {{ getErrorMessage() }}</mat-error>
+    </mat-form-field> 
+
+    <!--date -->
+    <mat-form-field>
+        <input matInput placeholder="Date" [matDatepicker]="datepicker" [(ngModel)]="model.date" #date="ngModel" required>
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker></mat-datepicker>
+        <mat-error *ngIf="date.invalid"> {{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+
+    <!-- submit_button-->
+    <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="date.invalid || flightNumber.invalid"> Search</button> 
+    
+
+    <!-- result view -->
+    <div *ngIf="resultContainer"> 
+        <mat-divider></mat-divider>    
+        <!-- display result table-->
+        <display-result *ngIf="displayResult" [result]="flightStatus"></display-result>
+        <!-- display not found message-->
+        <result-not-found *ngIf="!displayResult"></result-not-found>  
+    </div>
+
+</div>

@@ -1,0 +1,12 @@
+/* style for router-outlet*/
+.router-outlet-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em;
+    padding: 3em;
+    border-radius: 8px;
+    height: fit-content;
+    width: fit-content;
+  }
+

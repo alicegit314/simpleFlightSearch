@@ -1,0 +1,19 @@
+
+<!-- navigation tab searchByCity / searchByFlightNumber-->
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+    *ngFor="let link of [{ path:'/search-by-city', title:'By Date and City'}, {path :'/search-by-flight-number', title:'By Date and Flight Number'}]"
+    [routerLink]="link.path"
+    routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive">
+    {{link.title}}
+  </a>
+</nav>
+ 
+<div class="router-outlet-box mat-elevation-z4">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
